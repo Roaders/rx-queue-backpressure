@@ -1,0 +1,10 @@
+node_modules/
+typings/
+/src/
+/example/
+/test/
+/spec/
+.vscode/
+typings.json
+tsconfig.json
+.travis.yml
