@@ -1,5 +1,5 @@
 # rx-queue-backpressure
-An RX library to manage the number it items in a queue using backpressure
+An RX library to manage the number the items in a queue using backpressure
 
 ##Problem
 
