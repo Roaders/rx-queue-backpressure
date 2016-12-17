@@ -34,12 +34,12 @@ var imageSource = Rx.Observable.from(listOf1000Images);
 var queueManager = new QueueManager(imageSource,10); // Keep 10 items in queue at all times
 
 queuedImageSource.map(imagePath => loadImage(imagePath))
-  .merge(1)
+  .merge(2)
   .map(image => resizeImage(image))
-  .merge(1)
+  .merge(2)
   .map(image => uploadImage(image))
   .merge(1)
-  .do(queueManager.itemComplete())
+  .do(() => queueManager.itemComplete())
   .subscribe();
 ```
 

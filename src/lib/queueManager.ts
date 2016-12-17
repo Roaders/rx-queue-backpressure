@@ -79,7 +79,7 @@ export class QueueManager<T> implements IQueueInfo {
     //  Private Functions
 
     private request(){
-        this._controlled.request(this._queueLength - this._inProgressCounter.inProgress);
+         this._controlled.request(this._queueLength - this._inProgressCounter.inProgress);
     }
 
     private handleQueueLengthUpdate(length: number){
