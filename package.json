@@ -30,6 +30,7 @@
     "typings": "^2.0.0"
   },
   "dependencies": {
-    "rx": "^4.1.0"
+    "rx": "^4.1.0",
+    "stream-item-timer": "^2.1.0"
   }
 }

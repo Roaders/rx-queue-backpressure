@@ -12,6 +12,7 @@
         "src/**/*.ts"
     ],
     "files": [
-        "typings/index.d.ts"
+        "typings/index.d.ts",
+        "node_modules/rx/ts/rx.all.d.ts"
     ]
 }
