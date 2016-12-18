@@ -39,7 +39,7 @@ queuedImageSource.map(imagePath => loadImage(imagePath))
   .merge(2)
   .map(image => uploadImage(image))
   .merge(1)
-  .do(() => queueManager.itemComplete())
+  .do(() => queueManager.itemRemovedfromQueue())
   .subscribe();
 ```
 

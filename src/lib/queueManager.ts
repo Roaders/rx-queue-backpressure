@@ -71,7 +71,7 @@ export class QueueManager<T> implements IQueueInfo {
 
     //  Public Functions
 
-    itemComplete(){
+    itemRemovedfromQueue(){
         this._inProgressCounter.itemComplete();
         this.request();
     }

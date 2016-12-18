@@ -107,19 +107,19 @@ describe("Queue Manager", () => {
 
             queueLengthSubject.onNext(1);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3]);
             assertCounts(10,7,2,1);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3]);
             assertCounts(10,7,1,2);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4]);
             assertCounts(10,6,1,3);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5]);
             assertCounts(10,5,1,4);
 
@@ -128,27 +128,27 @@ describe("Queue Manager", () => {
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8]);
             assertCounts(10,2,4,4);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9]);
             assertCounts(10,1,4,5);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
             assertCounts(10,0,4,6);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
             assertCounts(10,0,3,7);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
             assertCounts(10,0,2,8);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
             assertCounts(10,0,1,9);
 
-            queueManager.itemComplete();
+            queueManager.itemRemovedfromQueue();
             expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
             assertCounts(10,0,0,10);
         });
@@ -159,43 +159,43 @@ describe("Queue Manager", () => {
         expect(receivedItems).toEqual([1,2,3,4]);
         assertCounts(10,6,4,0);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5]);
         assertCounts(10,5,4,1);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6]);
         assertCounts(10,4,4,2);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7]);
         assertCounts(10,3,4,3);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8]);
         assertCounts(10,2,4,4);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9]);
         assertCounts(10,1,4,5);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
         assertCounts(10,0,4,6);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
         assertCounts(10,0,3,7);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
         assertCounts(10,0,2,8);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
         assertCounts(10,0,1,9);
 
-        queueManager.itemComplete();
+        queueManager.itemRemovedfromQueue();
         expect(receivedItems).toEqual([1,2,3,4,5,6,7,8,9,10]);
         assertCounts(10,0,0,10);
     }

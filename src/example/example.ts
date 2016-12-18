@@ -84,7 +84,7 @@ queueManager.queue
     .merge(2)
     .map(imagePath => uploadImage(imagePath))
     .merge(2)
-    .do(() => queueManager.itemComplete())
+    .do(() => queueManager.itemRemovedfromQueue())
     .subscribe(
         imagePath => {
             imagesComplete++;
