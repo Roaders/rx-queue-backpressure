@@ -29,6 +29,8 @@ if the `uploadImage` call is very slow there is nothing to slow down the accumul
 This library allows you to set the number of items you want waiting in a queue so that there are always images waiting for upload but not too many:
 
 ```
+import {QueueManager} from "rx-queue-backpressure"
+
 var imageSource = Rx.Observable.from(listOf1000Images);
 
 var queueManager = new QueueManager(imageSource,10); // Keep 10 items in queue at all times
