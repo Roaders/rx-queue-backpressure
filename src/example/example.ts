@@ -9,10 +9,9 @@ let imagesLoading = 0;
 let imagesResizing = 0;
 let imagesWaiting = 0;
 let imagesUploading = 0;
-let imagesComplete = 0;
 
 function updateProgress(overwrite: boolean = true){
-    const message = `Waiting to Load: ${waitingToLoad}, Loading: ${imagesLoading}, Resizing: ${imagesResizing}, Waiting: ${imagesWaiting}, Uploading: ${imagesUploading}, Complete: ${imagesComplete}`
+    const message = `Waiting to Load: ${waitingToLoad}, Loading: ${imagesLoading}, Resizing: ${imagesResizing}, Waiting: ${imagesWaiting}, Uploading: ${imagesUploading}, Complete: ${queueManager.complete}`
 
     if(overwrite){
         process.stdout.write(message + "\r");
@@ -74,10 +73,10 @@ const imageSource = Rx.Observable.range(0,20)
  *  If we did not want to include the images actually uploading in this count we would have to move the
  *  itemRemovedfromQueue call within the uploadImage defer() function.
 */
-const queueManager = new QueueManager(imageSource,6);
+const queueManager = new QueueManager(imageSource,6,updateProgress);
 
 queueManager.queue
-    .do(image => waitingToLoad++)
+    .do(() => waitingToLoad++)
     .map(imagePath => loadImage(imagePath))
     .merge(2)
     .map(imagePath => resizeImage(imagePath))
@@ -86,10 +85,7 @@ queueManager.queue
     .merge(2)
     .do(() => queueManager.itemRemovedfromQueue())
     .subscribe(
-        imagePath => {
-            imagesComplete++;
-            updateProgress();
-        },
+        () => {},
         error => console.log(`Error: ${error}`),
         () => {
             updateProgress(false);

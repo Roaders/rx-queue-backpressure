@@ -10,9 +10,12 @@ export class QueueManager<T> implements IQueueInfo {
 
     //  Constructor
 
-    constructor(source: Rx.Observable<T>, queueLengthProvider: number | Rx.Observable<number>){
-        this._notStartedCounter = new StreamCounter();
-        this._inProgressCounter = new StreamCounter();
+    constructor(source: Rx.Observable<T>, 
+        queueLengthProvider: number | Rx.Observable<number>,
+        updateProgressCallback?: () => void){
+
+        this._notStartedCounter = new StreamCounter(updateProgressCallback);
+        this._inProgressCounter = new StreamCounter(updateProgressCallback);
 
         this._controlled = source
             .do(() => this._notStartedCounter.newItem())
