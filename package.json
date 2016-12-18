@@ -9,7 +9,7 @@
     "build": "tsc",
     "pretest": "npm run build",
     "test": "jasmine",
-    "prepublish": "typings install",
+    "prepublish": "npm run typings; npm run build",
     "prestart": "npm run build",
     "start": "node example/example.js"
   },
