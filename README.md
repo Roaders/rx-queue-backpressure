@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Roaders/rx-queue-backpressure.svg?branch=master)](https://travis-ci.org/Roaders/rx-queue-backpressure)
+[![Known Vulnerabilities](https://snyk.io/test/github/roaders/rx-queue-backpressure/badge.svg)](https://snyk.io/test/github/roaders/rx-queue-backpressure)
 
 # rx-queue-backpressure
 An RX library to manage the number the items in a queue using backpressure
