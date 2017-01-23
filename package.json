@@ -1,6 +1,6 @@
 {
   "name": "rx-queue-backpressure",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An RX library to manage the number the items in a queue using backpressure",
   "main": "index.js",
   "typings": "index.d.ts",
