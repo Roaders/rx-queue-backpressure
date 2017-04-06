@@ -2,6 +2,8 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/roaders/rx-queue-backpressure/badge.svg)](https://snyk.io/test/github/roaders/rx-queue-backpressure)
 
 # rx-queue-backpressure
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Roaders/rx-queue-backpressure.svg)](https://greenkeeper.io/)
 An RX library to manage the number the items in a queue using backpressure
 
 ## Installation
