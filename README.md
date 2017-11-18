@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/Roaders/rx-queue-backpressure.svg?branch=master)](https://travis-ci.org/Roaders/rx-queue-backpressure)
 
 # rx-queue-backpressure
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Roaders/rx-queue-backpressure.svg)](https://greenkeeper.io/)
 An RX library to manage the number the items in a queue using backpressure
 
 ## Installation
