@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Roaders/rx-queue-backpressure#readme",
   "devDependencies": {
-    "jasmine": "^2.5.2",
+    "jasmine": "^3.5.0",
     "typescript": "^2.1.4",
     "typings": "^2.0.0"
   },
